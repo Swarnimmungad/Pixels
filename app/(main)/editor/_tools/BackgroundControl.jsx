@@ -90,26 +90,26 @@ function BackgroundControls({ project }) {
     }
   };
 
-  // Set canvas background color
+  
   const handleColorBackground = () => {
     if (!canvasEditor) return;
 
-    // In Fabric.js 6.7, set property directly and render
+    
     canvasEditor.backgroundColor = backgroundColor;
     canvasEditor.requestRenderAll();
   };
 
-  // Remove canvas background (both color and image)
+  
   const handleRemoveBackground = () => {
     if (!canvasEditor) return;
 
-    // Clear both background color and image
+    
     canvasEditor.backgroundColor = null;
     canvasEditor.backgroundImage = null;
     canvasEditor.requestRenderAll();
   };
 
-  // Search Unsplash images
+  
   const searchUnsplashImages = async () => {
     if (!searchQuery.trim() || !UNSPLASH_ACCESS_KEY) return;
 
